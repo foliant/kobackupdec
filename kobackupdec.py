@@ -693,7 +693,7 @@ def decrypt_files_in_root(decrypt_info, path_in, path_out):
                     if os.name == 'nt':
                         tar_extract_win(tar_data, data_app_dir)
                     else:
-                        tar_data.extractall(path=data_app_dir)
+                        tar_data.extractall(path=str(data_app_dir))
             else:
                 logging.warning('unable to decrypt entry %s', entry.name)
 
